@@ -45,12 +45,15 @@ this library is a class that can be used graph any data meant for a single quadr
   
   X: (string || number) array // the x values that should be displayed
   
-  Data: object array // will be the lines that will be displayed on the graph
-
-  // Data should be an array of objects and every object can be a line on the graph
-  // example object:
-  type object = {   
+  Data: object array // will be the lines that will be displayed on the graph 
+}
+```
+ Data should be an array of objects and every object can be a line on the graph
+ example object:
+ ``` typescript
+type Data = {   
     Y: array // y values of a line
+
     showGradient: boolean // shows gradient under a line
 
     showLastPoint: boolean // shows last point a line 
@@ -62,8 +65,6 @@ this library is a class that can be used graph any data meant for a single quadr
     lineDash: number array[2] // line dash
       
     showPoints: boolean // shows all the points on a line
-  },
-  
 }
 ```
 
@@ -96,7 +97,8 @@ document.addEventListener("graphData", (e)=>{
 
 ``` typescript
 
-  e.detail.current: object array // an array of objects for each line that containes the information of the current point or points your mouse or finger is on.
+  e.detail.current: object array
+  // an array of objects for each line that containes the information of the current point or points your mouse or finger is on.
   //current object:
   type current = {
     
